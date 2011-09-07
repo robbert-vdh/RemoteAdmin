@@ -1,0 +1,13 @@
+name: RemoteAdmin
+main: me.coolblinger.remoteadmin.RemoteAdmin
+author: coolblinger
+version: 1.0
+commands:
+   ra:
+      description: Main command for RemoteAdmin
+      usage: /<command>
+      aliases: remoteadmin
+permissions:
+   remoteadmin.manage:
+      description: Be able to manage accounts
+      default: op
