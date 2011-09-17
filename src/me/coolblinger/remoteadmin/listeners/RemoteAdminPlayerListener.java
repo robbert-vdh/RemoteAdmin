@@ -42,11 +42,6 @@ public class RemoteAdminPlayerListener extends PlayerListener {
 			command = "/register <CENSORED>";
 		}
 		command.replace("@", "%44");
-		if (!command.startsWith("/say ")) {
-			plugin.send("PLAYER_COMMAND@" + event.getPlayer().getName() + "@" + command);
-		} else {
-			String message = command.replaceFirst("/say ", "");
-			plugin.send("CHAT@" + event.getPlayer().getName() + "@" + message);
-		}
+		plugin.send("PLAYER_COMMAND@" + event.getPlayer().getName() + "@" + command);
 	}
 }
